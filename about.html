@@ -9,22 +9,31 @@
     <title>Home</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-brand">
-                <a href="index.html">Brand</a>
-            </div>
-            <div class="navbar-items">
-                <ul>
-                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      fetch('nav.html')
+        .then(response => response.text()) 
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data; 
+        })
+           
+    </script>
     <p>About</p>
     <!-- Rest of your page content -->
+
+    <!-- footer section -->
+
+    <div id="footer-placeholder"></div>
+
+
+    <script>
+      fetch('footer.html')
+          .then(response => response.text()) 
+      .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data; 
+      })
+         
+   </script>
 </body>
 </html>
