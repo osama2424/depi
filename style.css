@@ -1,7 +1,11 @@
 :root {
-   --primary-color: #727272;
-   --second-color: #1ABC9C;
+   --primary-color: #2C3E50; 
+   --second-color: #1ABC9C; 
    --main-font: 'Lato', sans-serif;
+   --hover-color: #ffcc00; 
+   --background-color: #ecf0f1; 
+   --footer-background-color: #34495e; 
+   --section-background-color: #393139; 
 }
 
 * {
@@ -13,6 +17,8 @@
 html, body {
    height: 100%;
    font-family: var(--main-font);
+   background-color: var(--background-color);
+
 }
 
 body {
@@ -24,12 +30,19 @@ body {
    flex: 1;
    display: flex;
    flex-direction: column;
+   padding: 20px; 
+
 }
 
 a {
    text-decoration: none;
    font-size: 1.3rem;
-   color: rgb(255, 4, 4);
+   color: var(--background-color); 
+   transition: color 0.3s; 
+}
+
+a:hover {
+   color: var(--hover-color);
 }
 
 ul {
@@ -37,10 +50,16 @@ ul {
 }
 
 .navbar {
-   margin-top: 15px;
-   width: 75%;
-   margin: 0 auto;
+   margin-top: 1px;
+   width: 100%; 
    background-color: var(--primary-color);
+   padding: 10px 20px; 
+   border-radius: 8px; /* Added border-radius for rounded corners */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-items a:hover {
+   color: var(--hover-color); 
 }
 
 .navbar .navbar-container {
@@ -54,6 +73,10 @@ ul {
    padding-left: 10px;
    padding-right: 10px;
    font-size: 1.8rem;
+}
+
+.navbar .navbar-container .navbar-items ul li:hover {
+   color: var(--second-color);
 }
 
 .navbar .navbar-container .navbar-brand a {
@@ -70,9 +93,23 @@ main {
    padding: 20px;
 }
 
+
+/* Section Styles */
+.home-section {
+   background-color: var(--section-background-color); 
+   color: white; 
+   padding: 12px; 
+   margin: 100px;
+   border-radius: 15px; 
+   box-shadow: 0 9px 8px rgba(0, 0, 0, 0.1); 
+   text-align: center; 
+   font-size: 2rem;
+}
+
+
 /* Footer Styles */
 .footer {
-   background-color: var(--primary-color);
+   background-color: var(--footer-background-color); 
    color: white;
    padding: 20px 0;
    text-align: center;
